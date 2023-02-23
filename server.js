@@ -1,16 +1,6 @@
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
-const themeToggle = document.getElementById('theme-toggle');
-
-// Ecouteur d'événement pour le clic sur le bouton
-themeToggle.addEventListener('click', function() {
-  // Récupération de l'élément body
-  const body = document.body;
-
-  // Ajout ou suppression de la classe 'dark' sur l'élément body
-  body.classList.toggle('dark');
-});
 
 const server = http.createServer((req, res) => {
   // Si l'utilisateur accède à la racine, chargez index.html par défaut.
