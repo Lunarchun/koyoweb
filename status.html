@@ -7,19 +7,46 @@
     <title>Statut de KoyoBot</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0.5rem;
+      }
+
+      nav ul li {
+        list-style: none;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem;
+      }
+    </style>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="invite.html">Inviter Koyobot</a></li>
+        <li><a href="status.html">Statut</a></li>
+      </ul>
+    </nav>
     <h2>Statut de KoyoBot</h2>
     <p>Le bot KoyoBot est actuellement <span id="status">en cours de vérification</span>.</p>
     <div class="watchbot-widget" data-id="978174399683387433" data-theme="dark"></div>
-    <body>
-        <nav>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="invite.html">Inviter Koyobot</a></li>
-            <li><a href="status.html">Statut</a></li>
-          </ul>
-        </nav>
     <script>
       $(document).ready(function() {
         $.getJSON('https://watchbot.app/api/bots/978174399683387433?token=v5x5l0mshj3miey2vd6gf', function(data) {
@@ -37,6 +64,7 @@
       });
     </script>
     <script src="https://watchbot.app/widget/widget.js"></script>
+    <script src="server.js"></script>
   </body>
 </html>
 
