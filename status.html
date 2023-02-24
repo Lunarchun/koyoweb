@@ -49,7 +49,7 @@
     <div class="watchbot-widget" data-id="978174399683387433" data-theme="dark"></div>
     <script>
       $(document).ready(function() {
-        $.getJSON('https://watchbot.app/api/bots/978174399683387433?token=v5x5l0mshj3miey2vd6gf', function(data) {
+        $.getJSON('https://api.watchbot.app/bot/978174399683387433', function(data) {
           if (data.status === "online") {
             $('#status').text('en ligne');
           } else if (data.status === "offline") {
